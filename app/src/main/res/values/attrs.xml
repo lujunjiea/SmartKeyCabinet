@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ClockView">
+        <!--表盘颜色-->
+        <attr name="clock_background_color" format="color" />
+        <!--大刻度颜色-->
+        <attr name="big_scale_line_color" format="color" />
+        <!--小刻度颜色-->
+        <attr name="small_scale_line_color" format="color" />
+        <!--时针颜色-->
+        <attr name="hour_hand_color" format="color" />
+        <!--分针颜色-->
+        <attr name="minute_hand_color" format="color" />
+        <!--秒针颜色-->
+        <attr name="second_hand_color" format="color" />
+    </declare-styleable>
+
+    <array name="spinner_values">
+        <item>嫦娥</item>
+        <item>上官婉儿</item>
+        <item>猪八戒</item>
+        <item>司马懿</item>
+        <item>盘古</item>
+        <item>伽罗</item>
+        <item>艾琳</item>
+        <item>韩信</item>
+    </array>
+</resources>

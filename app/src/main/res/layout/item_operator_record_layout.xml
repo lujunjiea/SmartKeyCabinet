@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/ll_bg"
+    android:layout_marginLeft="@dimen/dp_10"
+    android:layout_marginRight="@dimen/dp_10"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_sn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/dp_3"
+        android:text="@string/str_admin_sn"
+        android:textColor="@color/bg_textColor"
+        android:textSize="@dimen/sp_8"></TextView>
+
+    <TextView
+        android:id="@+id/tv_operation_mode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:padding="@dimen/dp_3"
+        android:text="@string/str_admin_operation_mode"
+        android:textColor="@color/bg_textColor"
+        android:textSize="@dimen/sp_8"></TextView>
+
+    <TextView
+        android:id="@+id/tv_identification_mode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:padding="@dimen/dp_3"
+        android:text="@string/str_admin_recognition_mode"
+        android:textColor="@color/bg_textColor"
+        android:textSize="@dimen/sp_8"></TextView>
+
+    <TextView
+        android:id="@+id/tv_operator_people"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:padding="@dimen/dp_3"
+        android:text="@string/str_admin_operator"
+        android:textColor="@color/bg_textColor"
+        android:textSize="@dimen/sp_8"></TextView>
+
+    <TextView
+        android:id="@+id/tv_department"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/dp_3"
+        android:text="@string/str_admin_department"
+        android:textColor="@color/bg_textColor"
+        android:textSize="@dimen/sp_8"></TextView>
+
+    <TextView
+        android:id="@+id/tv_operation_box_no"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/dp_3"
+        android:text="@string/str_admin_operation_box_no"
+        android:textColor="@color/bg_textColor"
+        android:textSize="@dimen/sp_8"></TextView>
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:padding="@dimen/dp_3"
+        android:text="@string/str_admin_operator_phone"
+        android:textColor="@color/bg_textColor"
+        android:textSize="@dimen/sp_8"></TextView>
+
+    <TextView
+        android:id="@+id/tv_operation_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:padding="@dimen/dp_3"
+        android:text="@string/str_admin_operation_time"
+        android:textColor="@color/bg_textColor"
+        android:textSize="@dimen/sp_8"></TextView>
+</LinearLayout>

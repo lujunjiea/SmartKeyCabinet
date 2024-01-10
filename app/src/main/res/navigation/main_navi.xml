@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navi"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.smartkeycabinet.ui.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_getCarFragment"
+            app:destination="@id/getCarFragment" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_returnCarFragment"
+            app:destination="@id/returnCarFragment" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_adminLoginFragment"
+            app:destination="@id/adminLoginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/getCarFragment"
+        android:name="com.example.smartkeycabinet.ui.fragment.GetCarTypeFragment"
+        android:label="fragment_get_car"
+        tools:layout="@layout/fragment_get_car">
+        <action
+            android:id="@+id/action_getCarFragment_to_getCarCodeFragment"
+            app:destination="@id/getCarCodeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/getCarCodeFragment"
+        android:name="com.example.smartkeycabinet.ui.fragment.GetCarCodeFragment"
+        android:label="fragment_get_car_code"
+        tools:layout="@layout/fragment_get_car_code">
+    </fragment>
+
+    <fragment
+        android:id="@+id/returnCarFragment"
+        android:name="com.example.smartkeycabinet.ui.fragment.ReturnCarFragment"
+        android:label="fragment_return_car"
+        tools:layout="@layout/fragment_return_car">
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminLoginFragment"
+        android:name="com.example.smartkeycabinet.ui.fragment.AdminFragment"
+        android:label="fragment_admin_login"
+        tools:layout="@layout/fragment_admin">
+
+        <action
+            android:id="@+id/action_adminLoginFragment_to_adminHandlerFragment"
+            app:destination="@id/adminHandlerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminHandlerFragment"
+        android:name="com.example.smartkeycabinet.ui.fragment.AdminHandlerFragment"
+        android:label="fragment_admin_handler"
+        tools:layout="@layout/fragment_admin_handler">
+
+        <action
+            android:id="@+id/action_adminHandlerFragment_to_operatorRecordFragment"
+            app:destination="@id/operatorRecordFragment" />
+
+        <action
+            android:id="@+id/action_adminHandlerFragment_to_operatorOpenBoxFragment"
+            app:destination="@id/operatorOpenBoxFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/operatorRecordFragment"
+        android:name="com.example.smartkeycabinet.ui.fragment.AdminOperatorRecordFragment"
+        android:label="fragment_admin_operator_record"
+        tools:layout="@layout/fragment_operator_record">
+    </fragment>
+
+    <fragment
+        android:id="@+id/operatorOpenBoxFragment"
+        android:name="com.example.smartkeycabinet.ui.fragment.AdminOperatorOpenBoxFragment"
+        android:label="fragment_admin_operator_open_box"
+        tools:layout="@layout/fragment_operator_open_box">
+    </fragment>
+
+</navigation>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/img_main_background">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tv_check_face"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:text="@string/str_check_face"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:background="@drawable/selector_btn"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/dp_10">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_qrcode"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:text="@string/str_qrcode"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:background="@drawable/selector_btn"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/dp_10">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_get_car_code"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:text="@string/str_get_car_code"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:background="@drawable/selector_btn"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/dp_10">
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_back"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:background="@drawable/selector_btn"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_alignParentRight="true">
+    </TextView>
+</RelativeLayout>

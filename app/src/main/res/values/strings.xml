@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">公车智能钥匙柜</string>
+
+    <!--首页string-->
+    <string name="str_get_car">我要取车</string>
+    <string name="str_return_car">我要还车</string>
+    <string name="str_admin">管理员操作</string>
+
+    <!--取车方式string-->
+    <string name="str_check_face">人脸识别</string>
+    <string name="str_qrcode">二维码</string>
+    <string name="str_get_car_code">取车码</string>
+    <string name="str_feature_not_available">该功能暂未开放</string>
+
+    <string name="str_back">返回</string>
+    <string name="str_exit_app">退出程序</string>
+    <string name="str_show_navigation">显示虚拟按键</string>
+
+    <!--取车码string-->
+    <string name="str_hint_tip">请输入取车码</string>
+    <string name="str_enter">确定</string>
+    <string name="str_cancel">取消</string>
+    <string name="str_check_get_car_code">校验取车码...</string>
+
+    <!--还车 string-->
+    <string name="str_car_no">车牌号</string>
+    <string name="str_stop_car_position">停车位置</string>
+    <string name="str_return_car_kil">还车公里数</string>
+    <string name="str_hint_car_no">请输入车牌号</string>
+    <string name="str_hint_stop_car_kil">请输入还车时公里数</string>
+    <string name="str_returning_car">正在还车...</string>
+    <string name="str_returning_car_retry_get_box">重新获取箱格...</string>
+
+    <!--管理员string-->
+    <string name="str_admin_password">管理员密码</string>
+    <string name="str_admin_password_hint">请输入管理员密码</string>
+    <string name="str_admin_check_password">正在登录...</string>
+    <string name="str_admin_operator_record">操作记录</string>
+    <string name="str_admin_open_box">手动开柜</string>
+    <string name="str_admin_operator">操作人员</string>
+    <string name="str_admin_date">起止日期</string>
+    <string name="str_admin_search">搜索</string>
+    <string name="str_admin_start_time">开始时间: </string>
+    <string name="str_admin_end_time">结束时间: </string>
+    <string name="str_admin_sn">序号</string>
+    <string name="str_admin_operation_mode">操作方式</string>
+    <string name="str_admin_recognition_mode">识别方式</string>
+    <string name="str_admin_department">部门</string>
+    <string name="str_admin_operation_box_no">操作柜号</string>
+    <string name="str_admin_operator_phone">联系电话</string>
+    <string name="str_admin_operation_time">操作时间</string>
+    <string name="str_admin_get_operator_record">正在获取操作记录...</string>
+    <string name="str_admin_get_box_list">正在获取柜子列表...</string>
+    <string name="str_admin_upload_record">正在上传操作记录...</string>
+    <string name="str_admin_not_key">无钥匙</string>
+    <string name="str_admin_have_key">有钥匙</string>
+    <string name="str_admin_failure_box">损坏</string>
+
+    <!--http string-->
+    <string name="str_http_error">网络异常，请检查网络</string>
+
+    <!--柜子相关 string-->
+    <string name="str_opening_box">正在打开柜门...</string>
+    <string name="str_open_success">开箱成功！\n请取出钥匙并关闭箱门</string>
+    <string name="str_open_failed">开箱失败！\n请联系管理员解决</string>
+    <string name="str_return_car_open_success">开箱成功！\n请放入钥匙并关闭箱门</string>
+    <string name="str_return_car_open_failed">开箱失败！\n请重新尝试</string>
+
+    <!-- 时间选择器 -->
+    <string name="mdtp_from">开始时间</string>
+    <string name="mdtp_to">结束时间</string>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center_vertical"
+        android:layout_margin="@dimen/dp_5">
+        <View
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:background="@drawable/shape_et">
+        </View>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bg_textColor"
+            android:textSize="@dimen/sp_12"
+            android:text="@string/str_admin_not_key"
+            android:layout_marginLeft="@dimen/dp_5">
+        </TextView>
+
+        <View
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:background="@color/blue"
+            android:layout_marginLeft="@dimen/dp_15">
+        </View>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bg_textColor"
+            android:textSize="@dimen/sp_12"
+            android:text="@string/str_admin_have_key"
+            android:layout_marginLeft="@dimen/dp_5">
+        </TextView>
+
+        <View
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:background="@color/red"
+            android:layout_marginLeft="@dimen/dp_15">
+        </View>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bg_textColor"
+            android:textSize="@dimen/sp_12"
+            android:text="@string/str_admin_failure_box"
+            android:layout_marginLeft="@dimen/dp_5">
+        </TextView>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_bg"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_40">
+    </GridView>
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/selector_btn"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_5"
+        android:text="@string/str_back"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold">
+    </TextView>
+</RelativeLayout>
