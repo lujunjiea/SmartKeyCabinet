@@ -8,5 +8,5 @@ object NetConstant {
 //    const val RELEASE_SERVER_URL = "http://prod-cn.your-api-server.com/"
     //正式环境
 //    const val RELEASE_SERVER_URL = "http://56.35.6.198:8090/inner-api/car/"
-    const val RELEASE_SERVER_URL = "http://56.35.6.196:8090/inner-api/car/"
+    const val RELEASE_SERVER_URL = "http://56.35.6.196/inner-api/car/"
 }
