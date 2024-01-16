@@ -45,7 +45,6 @@ class AdminFragment : BaseFragment<FragmentAdminBinding>() {
         }
 
         viewBinding.tvVersion.text = BuildConfig.VERSION_NAME
-        viewBinding.tvMacAddress.text = Utils.getMacAddress(activity)
     }
 
     //校验密码
