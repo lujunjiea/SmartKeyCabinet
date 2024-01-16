@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.example.smartkeycabinet.BuildConfig
 import com.example.smartkeycabinet.R
 import com.example.smartkeycabinet.databinding.FragmentAdminBinding
 import com.example.smartkeycabinet.net.BaseObserver
@@ -13,6 +14,7 @@ import com.example.smartkeycabinet.net.HttpRequest
 import com.example.smartkeycabinet.util.KeyboardUtil
 import com.example.smartkeycabinet.util.ProgressDialogUtils
 import com.example.smartkeycabinet.util.ToastUtil
+import com.example.smartkeycabinet.util.Utils
 import com.tti.coffeeslaver.base.BaseFragment
 
 
@@ -41,6 +43,9 @@ class AdminFragment : BaseFragment<FragmentAdminBinding>() {
         viewBinding.tvBack.setOnClickListener {
             Navigation.findNavController(view).navigateUp()
         }
+
+        viewBinding.tvVersion.text = BuildConfig.VERSION_NAME
+        viewBinding.tvMacAddress.text = Utils.getMacAddress(activity)
     }
 
     //校验密码

@@ -1,5 +1,9 @@
 package com.example.smartkeycabinet.util;
 
+import android.content.Context;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
+
 public class Utils {
     /**
      * 解析byte数组
@@ -20,5 +24,16 @@ public class Utils {
             return result.toString();
         }
         return "";
+    }
+
+    public static String getMacAddress(Context context) {
+        WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+        if (wifiManager != null) {
+            WifiInfo info = wifiManager.getConnectionInfo();
+            if (info != null) {
+                return info.getMacAddress();
+            }
+        }
+        return "Unavailable";
     }
 }
