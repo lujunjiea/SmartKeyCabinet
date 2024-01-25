@@ -36,6 +36,7 @@ public class ApiServiceManager {
 
     private ApiServiceManager() {
         String baseUrl = NetConstant.RELEASE_SERVER_URL;
+//        String baseUrl = NetConstant.TEST_SERVER_URL;
         if (TextUtils.isEmpty(baseUrl)) {
             throw new IllegalArgumentException("baseUrl is empty");
         }

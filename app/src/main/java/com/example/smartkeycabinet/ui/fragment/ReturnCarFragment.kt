@@ -218,19 +218,19 @@ class ReturnCarFragment : BaseFragment<FragmentReturnCarBinding>() {
      * 获取停车位列表
      */
     private fun getCarPosition() {
-        var body = GetCarListBodyModel("","","","","",1, 200)
+        var body = GetCarListBodyModel("","","","无车","",1, 200)
         HttpRequest.getCarPositionList(body, object: BaseObserver<CarListBean>() {
             override fun onSuccess(baseResponse: BaseResponse<CarListBean>?) {
                 if (baseResponse != null && baseResponse.isSuccess && baseResponse.data.list.isNotEmpty()) {
                     carList = baseResponse.data.list
                 } else {
-                    ToastUtil.showToast("数据异常!")
+                    ToastUtil.showToast("车位列表数据异常!")
                 }
             }
 
             override fun onFailure(e: Throwable?) {
                 super.onFailure(e)
-                ToastUtil.showToast("车位列表获取失败!")
+                ToastUtil.showToast("车位列表请求失败!")
             }
         })
     }
