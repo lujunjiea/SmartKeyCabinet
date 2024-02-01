@@ -1,5 +1,6 @@
 package com.example.smartkeycabinet.ui.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,6 +30,7 @@ class AdminFragment : BaseFragment<FragmentAdminBinding>() {
         return viewBinding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mView = view
@@ -44,7 +46,7 @@ class AdminFragment : BaseFragment<FragmentAdminBinding>() {
             Navigation.findNavController(view).navigateUp()
         }
 
-        viewBinding.tvVersion.text = BuildConfig.VERSION_NAME
+        viewBinding.tvVersion.text = "V" + BuildConfig.VERSION_NAME
     }
 
     //校验密码
