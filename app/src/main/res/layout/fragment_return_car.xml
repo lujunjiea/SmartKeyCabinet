@@ -89,7 +89,7 @@
                 android:textSize="@dimen/sp_12"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:hint="请选择车牌号"
+                android:hint="@string/str_hint_stop_car_position"
                 android:textColorHint="@color/gray"
                 android:gravity="center">
             </TextView>

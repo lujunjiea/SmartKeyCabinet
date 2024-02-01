@@ -27,6 +27,7 @@
     <string name="str_stop_car_position">停车位置</string>
     <string name="str_return_car_kil">还车公里数</string>
     <string name="str_hint_car_no">请输入车牌号</string>
+    <string name="str_hint_stop_car_position">请选择停车位置</string>
     <string name="str_hint_stop_car_kil">请输入还车时公里数</string>
     <string name="str_returning_car">正在还车...</string>
     <string name="str_returning_car_retry_get_box">重新获取箱格...</string>
