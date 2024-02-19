@@ -26,9 +26,13 @@ object OperateBoxUtil {
         Log.e("","第$currentRetryNum 次尝试开门")
         SerialPortUtil.INSTANCE.openDoor(boxNo, object : KeyBoxCallBack<Any> {
             override fun onSuccess() {
-                Log.e("","开门命令发送成功，检测箱门状态")
-                Thread.sleep(2000)
-                checkBoxStatus(boxNo)
+//                Log.e("","开门命令发送成功，检测箱门状态")
+//                Thread.sleep(500)
+//                checkBoxStatus(boxNo)
+                Log.e("","开门命令发送成功，不检测箱门状态，默认成功")
+                if (mCallBack != null) {
+                    mCallBack!!.onSuccess()
+                }
             }
             override fun onFailed(failedType: FailedType?) {
                 Log.e("","开门失败: ${failedType?.name}")

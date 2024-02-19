@@ -140,18 +140,18 @@ public enum SerialPortUtil {
         mSerialPortManager.sendBytes(bs);
 
         //超时处理， 如果3s后未收到回复（收到回复后会将currentType和mCallBack设为null），则走超时回调
-        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Log.e("","是否超时？");
-                if (currentType == CommandType.OPEN_DOOR && mCallBack != null) {
-                    Log.e("","是否超时？  超时");
-                    mCallBack.onFailed(FailedType.COMMAND_TIME_OUT);
-                    return;
-                }
-                Log.e("","是否超时？  未超时");
-            }
-        }, 3000);
+//        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                Log.e("","是否超时？");
+//                if (currentType == CommandType.OPEN_DOOR && mCallBack != null) {
+//                    Log.e("","是否超时？  超时");
+//                    mCallBack.onFailed(FailedType.COMMAND_TIME_OUT);
+//                    return;
+//                }
+//                Log.e("","是否超时？  未超时");
+//            }
+//        }, 3000);
     }
 
     /**
@@ -173,14 +173,14 @@ public enum SerialPortUtil {
         mSerialPortManager.sendBytes(bs);
 
         //超时处理， 如果3s后未收到回复（收到回复后会将currentType和mCallBack设为null），则走超时回调
-        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (currentType == CommandType.CHECK_DOOR_STATUS && mCallBack != null) {
-                    mCallBack.onFailed(FailedType.COMMAND_TIME_OUT);
-                }
-            }
-        }, 3000);
+//        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                if (currentType == CommandType.CHECK_DOOR_STATUS && mCallBack != null) {
+//                    mCallBack.onFailed(FailedType.COMMAND_TIME_OUT);
+//                }
+//            }
+//        }, 3000);
     }
 
 }

@@ -15,7 +15,7 @@ import org.json.JSONObject
 object UpdateBoxStatusUtil {
     const val BOX_STATUS_IDLE = 0 //无钥匙
     const val BOX_STATUS_BUSY = 1 //有钥匙
-    const val BOX_STATUS_FAILED = 0 //损坏
+    const val BOX_STATUS_FAILED = 2 //损坏
 
     //更新箱格状态
     fun updateBoxStatus(boxStatus: Int, boxId: Int, plateNumber: String) {
