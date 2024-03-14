@@ -9,24 +9,24 @@ import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
 import com.example.smartkeycabinet.R
 
 class KeyboardUtil(private var activity: FragmentActivity, val mKeyboardView: KeyboardView?) {
 
-    private val provinceKeyboard: Keyboard
+//    private val provinceKeyboard: Keyboard
     private var abcKeyboard: Keyboard
     private var editText: EditText? = null
 
     init {
         // 省份键盘
-        provinceKeyboard = Keyboard(activity, R.xml.province)
+//        provinceKeyboard = Keyboard(activity, R.xml.province)
         // abc键盘
         abcKeyboard = Keyboard(activity, R.xml.abc)
 
         mKeyboardView?.apply {
-            keyboard = provinceKeyboard
+//            keyboard = provinceKeyboard
+            keyboard = abcKeyboard
             isEnabled = true
             // 设置按键没有点击放大镜显示的效果
             isPreviewEnabled = false
@@ -87,7 +87,7 @@ class KeyboardUtil(private var activity: FragmentActivity, val mKeyboardView: Ke
         if (isNumber) {
             mKeyboardView?.keyboard = abcKeyboard
         } else {
-            mKeyboardView?.keyboard = provinceKeyboard
+//            mKeyboardView?.keyboard = provinceKeyboard
         }
     }
 

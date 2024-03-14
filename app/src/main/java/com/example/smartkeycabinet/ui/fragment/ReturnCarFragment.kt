@@ -67,7 +67,7 @@ class ReturnCarFragment : BaseFragment<FragmentReturnCarBinding>() {
         keyboardUtil!!.hideSoftInputMethod(viewBinding.etCarNo)
         keyboardUtil!!.hideKeyboard()
         keyboardUtil!!.setEditText(viewBinding.etCarNo)
-        keyboardUtil!!.changeKeyboard(false)
+        keyboardUtil!!.changeKeyboard(true)
 //        viewBinding.etCarNo.requestFocus()
     }
 
@@ -108,6 +108,9 @@ class ReturnCarFragment : BaseFragment<FragmentReturnCarBinding>() {
             ToastUtil.showToast("请完善信息!")
             return
         }
+        //车牌号前面自动添加“鲁”
+        body.plateNumber = "鲁${body.plateNumber}"
+
         if (type.equals("0")) {
             ProgressDialogUtils.showProgressDialog(activity, getString(R.string.str_returning_car))
         } else {

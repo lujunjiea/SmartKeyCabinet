@@ -71,10 +71,16 @@
             android:keyEdgeFlags="right" />
     </Row>
     <Row >
-        <Key android:codes="-2"
-            android:keyEdgeFlags="left" android:keyLabel="省份"
+<!--        <Key android:codes="-2"-->
+<!--            android:keyEdgeFlags="left" android:keyLabel="省份"-->
+<!--            android:horizontalGap="1%p" android:keyWidth="13%p"-->
+<!--            android:isModifier="true" android:isSticky="true"  />-->
+        <Key
+            android:codes="35686"
+            android:keyLabel="警"
+            android:keyEdgeFlags="left"
             android:horizontalGap="1%p" android:keyWidth="13%p"
-            android:isModifier="true" android:isSticky="true"  />
+            android:isModifier="true" android:isSticky="true" />
         <Key android:codes="90" android:keyLabel="Z"
             />
         <Key android:codes="88" android:keyLabel="X"

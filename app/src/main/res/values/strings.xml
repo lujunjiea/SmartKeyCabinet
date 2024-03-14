@@ -31,6 +31,7 @@
     <string name="str_hint_stop_car_kil">请输入还车时公里数</string>
     <string name="str_returning_car">正在还车...</string>
     <string name="str_returning_car_retry_get_box">重新获取箱格...</string>
+    <string name="str_car_no_start">鲁</string>
 
     <!--管理员string-->
     <string name="str_admin_password">管理员密码</string>
