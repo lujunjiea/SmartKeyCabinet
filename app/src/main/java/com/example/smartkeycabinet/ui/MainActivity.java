@@ -7,21 +7,14 @@ import android.content.Intent;
 import android.huidu.toolkit.HuiduTech;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.smartkeycabinet.R;
 import com.example.smartkeycabinet.event.ShowKeyEvent;
 import com.example.smartkeycabinet.keyBoxUtil.SerialPortUtil;
-import com.example.smartkeycabinet.net.BaseObserver;
-import com.example.smartkeycabinet.net.BaseResponse;
-import com.example.smartkeycabinet.net.HttpRequest;
 import com.example.smartkeycabinet.util.EventBusUtil;
-
-import org.greenrobot.eventbus.EventBus;
+import com.example.smartkeycabinet.util.TTSUtil;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
@@ -42,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         EventBusUtil.register(this);
-        initPort();
-        hindVirtualKey(true, true);
+        TTSUtil.INSTANCE.initTTS(this);//初始化语音服务
+        initPort();//初始化串口
+        hindVirtualKey(true, true); //隐藏虚拟键盘
     }
 
     private void initPort() {
@@ -65,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         EventBusUtil.unregister(this);
+        TTSUtil.INSTANCE.stopSpeak();
     }
 
     /**

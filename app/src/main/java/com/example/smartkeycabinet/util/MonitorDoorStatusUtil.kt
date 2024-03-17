@@ -45,10 +45,14 @@ object MonitorDoorStatusUtil {
         val timer = Timer(true)
         val timerTask: TimerTask = object : TimerTask() {
             override fun run() {
+//                Log.d("测试---", "开始检测 -1")
                 if (checkBoxNos.size > 0) {
+//                    Log.d("测试---", "有需要检测箱格 -2")
                     executeCheckBoxOperation(object : CheckBoxOperation {
                         override fun performOperation() {
+//                            Log.d("测试---", "开启循环 -3")
                             checkBoxNos.forEach {
+//                                Log.d("测试---", "检测箱格号：$it -4")
                                 OperateBoxUtil.checkBoxStatus(it, object : OpenBoxCallBack {
                                     override fun onSuccess() {
                                         boxOpen(it) //箱格为开的处理
@@ -58,11 +62,14 @@ object MonitorDoorStatusUtil {
                                         boxClose(it) //箱格为关
                                     }
                                 })
+//                                Log.d("测试---", "线程沉睡 --")
                                 Thread.sleep(2000)
+//                                Log.d("测试---", "线程沉睡结束 --")
                             }
                         }
                     })
                 } else {
+//                    Log.d("测试---", "无需要检测箱格 -2")
                     isChecking = false
                     cancel()
                 }
@@ -73,12 +80,13 @@ object MonitorDoorStatusUtil {
     }
 
     fun boxClose(boxNo: Int) {
-        Log.e("","箱格关闭状态，删除该箱格轮询")
+//        Log.e("测试---","$boxNo 号箱格关闭状态，删除该箱格轮询 -5")
         removeBoxNo(boxNo)
     }
 
     fun boxOpen(boxNo: Int) {
-        Log.e("","箱格打开状态，提示用户")
+//        Log.e("测试---","$boxNo 号箱格打开状态，提示用户 -5")
+        TTSUtil.startSpeak("请关闭箱门！")
     }
 
 }

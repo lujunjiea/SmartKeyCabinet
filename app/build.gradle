@@ -54,6 +54,12 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
     applicationVariants.all { variant ->
         variant.outputs.all { output ->
             def outputFile = output.outputFile
@@ -85,7 +91,6 @@ dependencies {
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.core:core-ktx:1.10.1'
-    implementation files('libs/Msc.jar')
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -128,4 +133,7 @@ dependencies {
 
     //迎峰科技安卓屏幕SDK
     implementation files('libs/toolkit.jar')
+
+    //讯飞支持jar包
+    implementation files('libs/Msc.jar')
 }
