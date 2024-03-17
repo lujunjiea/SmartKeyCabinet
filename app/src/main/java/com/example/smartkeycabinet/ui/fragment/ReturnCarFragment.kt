@@ -32,6 +32,7 @@ import com.example.smartkeycabinet.net.BaseObserver
 import com.example.smartkeycabinet.net.BaseResponse
 import com.example.smartkeycabinet.net.HttpRequest
 import com.example.smartkeycabinet.util.KeyboardUtil
+import com.example.smartkeycabinet.util.MonitorDoorStatusUtil
 import com.example.smartkeycabinet.util.ProgressDialogUtils
 import com.example.smartkeycabinet.util.ToastUtil
 import com.tti.coffeeslaver.base.BaseFragment
@@ -179,6 +180,7 @@ class ReturnCarFragment : BaseFragment<FragmentReturnCarBinding>() {
         if (!isSuccess) {
             boxStatus = UpdateBoxStatusUtil.BOX_STATUS_FAILED
         }
+        MonitorDoorStatusUtil.addBoxNo(boxNo) //将箱格加入监听列表
         UpdateBoxStatusUtil.updateBoxStatus(boxStatus, boxNo, body.plateNumber)
     }
 

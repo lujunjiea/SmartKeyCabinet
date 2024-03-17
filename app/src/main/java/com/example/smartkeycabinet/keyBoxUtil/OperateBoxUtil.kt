@@ -42,18 +42,16 @@ object OperateBoxUtil {
         })
     }
 
-    fun checkBoxStatus(boxNo: Int) {
+    fun checkBoxStatus(boxNo: Int, callBack: OpenBoxCallBack) {
         SerialPortUtil.INSTANCE.checkDoorStatus(boxNo, object : KeyBoxCallBack<Any> {
             override fun onData(data: Any?) {
                 val doorStatus = data.toString()
                 if (doorStatus.equals(KeyBoxCommunicationUtil.STATE_SMALL_DOOR_OPEN)) {
                     Log.e("","门状态为 打开")
-                    if (mCallBack != null) {
-                        mCallBack!!.onSuccess()
-                    }
+                    callBack.onSuccess()
                 } else {
                     Log.e("","门状态为 关闭 重试")
-                    openBox(boxNo)
+                    callBack.onFailed()
                 }
             }
         })

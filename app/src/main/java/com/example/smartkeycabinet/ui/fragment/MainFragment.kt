@@ -8,12 +8,8 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.example.smartkeycabinet.R
 import com.example.smartkeycabinet.databinding.FragmentMainBinding
-import com.example.smartkeycabinet.keyBoxUtil.FailedType
-import com.example.smartkeycabinet.keyBoxUtil.KeyBoxCallBack
-import com.example.smartkeycabinet.keyBoxUtil.SerialPortUtil
-import com.example.smartkeycabinet.util.ToastUtil
+import com.example.smartkeycabinet.util.MonitorDoorStatusUtil
 import com.tti.coffeeslaver.base.BaseFragment
-import org.json.JSONObject
 
 
 class MainFragment : BaseFragment<FragmentMainBinding>() {
@@ -34,6 +30,14 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         }
         viewBinding.rlAdmin.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_adminLoginFragment)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e("","需监听箱格数量：${MonitorDoorStatusUtil.checkBoxNos.size}")
+        if (MonitorDoorStatusUtil.checkBoxNos.size > 0) {
+            MonitorDoorStatusUtil.checkDoorStatus()
         }
     }
 }
